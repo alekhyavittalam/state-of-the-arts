@@ -3,7 +3,7 @@
 <b>Group name:</b> State-of-the-Arts
 
 
-<b>Description:</b> Our project will show the locations of iconic films around the world. As travel is slowly starting to reopen after the pandemic, we want to build a guide for film fanatics and tourists alike. These locations would help people learn about the cultures of different places and understand what kind of films were considered classics. Travel and exploration is an important part of learning about a city's culture and we want to revitalize the lost culture.
+<b>Description:</b> Our project will show the locations of iconic films around the world. As travel is slowly starting to reopen after the pandemic, we want to build a guide for film fanatics and tourists alike. These locations would help people learn about the cultures of different places and allow them to immerse themselves into the world of film. Travel and exploration is an important part of learning about a city's culture and we want to contribute towards this through our visual and interactive map.
 
 
 <h1>Our Team</h1>
