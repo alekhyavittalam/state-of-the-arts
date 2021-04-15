@@ -3,7 +3,9 @@
 <b>Group name:</b> State-of-the-Arts
 
 
-<b>Description:</b> Our project will show the locations of iconic films around the world. As travel is slowly starting to reopen after the pandemic, we want to build a guide for film fanatics and tourists alike. These locations would help people learn about the cultures of different places and allow them to immerse themselves into the world of film. Travel and exploration is an important part of learning about a city's culture and we want to contribute towards this through our visual and interactive map.
+<b>Description:</b> "Death rates from air pollution are highest in low-income countries." - ourworldindata.org
+
+We are interested in delving deeper into this aspect of pollution. Through our findings we want to see if the above statement is true and then dig deeper into why is it so. This project will open the eyes of users to global warming, the reasons for climate change and the steps we can take towards saving our planet.
 
 
 <h1>Our Team</h1>
@@ -19,7 +21,7 @@ Using geospatial data sets of different countries, our group focuses on the dist
 
 
 <h1>Methodology</h1>
-Web mapping is a unique way for us to showcase all the locations around the world where the most iconic films have been made. By using this medium, it allows viewers to fully immerse themselves into the space that they may only have seen in movies and on screen into something more tangible through visualizations. Adding pinpoints to the locations of these film sets on an interactive map helps the users better understand the environment of each individual movie including the resources the filmmakers had access to based on the surroundings. Simultaneously, it is a function that also features the most recognized scenes from a film, which can prompt the viewers to develop an interest towards further exploring these locations.
+Web mapping will allow us to visualize countries' carbon footprints and will also allow us to understand which countries emit more pollution. At one glance we will be able to simplify our research for it to be understandable to anyone. The goal of our project is for users to become more aware of climate change and web mapping is the best way to show how our planet is slowly dying due to emmissions from all over the world. The map will help users naviagte our findings and guide them towards understanding the goal and purpose of our research.
 
 <h1>Timeline</h1>
 
@@ -30,9 +32,9 @@ Web mapping is a unique way for us to showcase all the locations around the worl
 |Week 4|Build the foundation of website and map <br> (Data and Design)|
 |Week 5|Design the map <br> Input data and pictures <br> Test run|
 |Week 6|Presentations <br> Design and edit map based on feedback|
-|Week 7|Include text to make the project more personable <br> Continue editing code and design|
+|Week 7|Implement feedback received <br> Continue editing code and design|
 |Week 8|Include interactivity aspects <br> Test run <br> Improve design and style of map|
-|Week 9|Finalize website <br> Test website with family and friends to see if it is user friendly|
+|Week 9|Finalize website <br> User test website|
 |Week 10|Script preparations <br> Final presentations|
 
 
@@ -40,12 +42,13 @@ Web mapping is a unique way for us to showcase all the locations around the worl
 
 - GitHub: used to work on codes together/collaborate
 - HTML and CSS: making and designing/stylizing the map
+- Python/R: to clean the data before implementing it into our website
 - Leaflet (subject to change) and Javascript: to make the maps and give it it’s necessary functions
 
 <h1>Data</h1>
 
-[40 film locations around the world](https://www.roughguides.com/gallery/40-film-locations-around-the-world/) 
+[Global and City Yearly Average Temperatures](https://data.world/kacurtis/global-and-city-yearly-average-temperatures-1750-2015) 
 
-[The World’s Most Popular Locations on Instagram Stories](https://edition.cnn.com/travel/article/instagram-stories-most-tagged-cities/index.html) 
+[Industrial Emmissions and Integrated Pollution Control Facilities](https://data.world/ie-env-protection/232e397c-0f28-4a45-83fa-2fa559133058) 
 
-[This Instagram Account Shows What Popular Movie Locations Look Like Now](https://www.travelandleisure.com/culture-design/tv-movies/instagram-acount-real-life-movie-tv-locations)
+[Climate Change Indicators: Heat Related Deaths](https://www.epa.gov/climate-indicators/climate-change-indicators-heat-related-deaths)
