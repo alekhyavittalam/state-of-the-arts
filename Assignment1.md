@@ -5,7 +5,7 @@
 
 <b>Description:</b> "Death rates from air pollution are highest in low-income countries." - ourworldindata.org
 
-We are interested in delving deeper into this aspect of pollution. Through our findings we want to see if the above statement is true and then dig deeper into why is it so. This project will open the eyes of users to global warming, the reasons for climate change and the steps we can take towards saving our planet.
+We are interested in delving deeper into air pollution and finding the reasons as to why income level of countries is related to pollution emitted by them. Our project will focus on understanding where air quality is most detrimental to humans and the reasons behind these emissions. We hope to open the eyes of users towards global warming, the reasons for climate change and the steps we all can take towards saving our planet.
 
 
 <h1>Our Team</h1>
@@ -21,7 +21,7 @@ Using geospatial data sets of different countries, our group focuses on the dist
 
 
 <h1>Methodology</h1>
-Web mapping will allow us to visualize countries' carbon footprints and will also allow us to understand which countries emit more pollution. At one glance we will be able to simplify our research for it to be understandable to anyone. The goal of our project is for users to become more aware of climate change and web mapping is the best way to show how our planet is slowly dying due to emmissions from all over the world. The map will help users naviagte our findings and guide them towards understanding the goal and purpose of our research.
+Web mapping will allow us to visualize countries' carbon footprints and will also allow us to understand which countries emit more pollution. At one glance we will be able to simplify our research for it to be understandable to anyone. The goal of our project is for users to become more aware of climate change and web mapping is the best way to show how our planet is slowly dying due to emmissions from all over the world. We will be including other visulaizations in order to understand the reason behind air pollution, especially in low- and middle- income countries. The map will help users naviagte our findings and guide them towards understanding the goal and purpose of our research i.e. where air quality could be detrimental to most and the socioeconomic reasons behind it. 
 
 <h1>Timeline</h1>
 
