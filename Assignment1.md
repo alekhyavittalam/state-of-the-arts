@@ -52,3 +52,5 @@ Web mapping will allow us to visualize countries' carbon footprints and will als
 [Industrial Emmissions and Integrated Pollution Control Facilities](https://data.world/ie-env-protection/232e397c-0f28-4a45-83fa-2fa559133058) 
 
 [Climate Change Indicators: Heat Related Deaths](https://www.epa.gov/climate-indicators/climate-change-indicators-heat-related-deaths)
+
+[U.S. Pollution Data: Pollution in the U.S. since 2000](https://www.kaggle.com/sogun3/uspollution)
