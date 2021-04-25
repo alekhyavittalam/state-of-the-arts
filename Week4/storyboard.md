@@ -67,4 +67,4 @@ Natasha: Yes! I like that you can hide the sidebar, I think since our map will h
 
 <img src="">
 
-<img src="">
+<img src="https://github.com/alekhyavittalam/state-of-the-arts/blob/5c6434a32365a410a821ae2d53c86a4cc16caf7a/Week4/images/Untitled_Artwork.jpeg">
