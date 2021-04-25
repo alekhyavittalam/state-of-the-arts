@@ -6,7 +6,7 @@
 
 <h3> Reactions </h3>
 
-Natasha: I liked the idea of including the conclusions in the navigation page, it helps explain our purpose as well. I also liked the clickable aspect of the sidebar to show the top 5 countries, it increases user interactivity.
+Natasha: I think it was a cool idea to include the conclusions in the navigation page, it helps explain our purpose as well. I also liked the clickable aspect of the sidebar to show the top 5 countries, it increases user interactivity.
 
 Zona: I really like the Top 5 countries information in the sidebar that shows the low deaths and pollution data. Also, I like the slidebar you have for the year to show the changes that have occurred through time!
 
@@ -27,7 +27,7 @@ Zona: I like how all the ideas in the mind map connect back to the user experien
 
 Alekhya: I like the idea of using markers as circles to show the region. I also like the color coding that would take you to different regions on the map. 
 
-Natasha: I liked the idea of color coding the different parts of the map, I think it helps add a good overall aesthetic to an otherwise boring map. It also helps include one more data/factor/characteristic? besides what the markers represent.
+Natasha: Love the idea of color coding the different parts of the map, I think it helps add a good overall aesthetic to an otherwise boring map. It also helps include one more data/factor/characteristic? besides what the markers represent.
 
 
 <h1> Crazy Eights + Reactions </h1>
@@ -37,7 +37,7 @@ Natasha: I liked the idea of color coding the different parts of the map, I thin
 
 <h3> Reactions </h3>
 
-Natasha:Oooo I like the idea of a year-slider scale. It might be hard to execute with all the information we’re including but I think it gives our map a good range so it’s more useful to users. I also like the fact that we could include details in the popup, it helps give meaning behind numbers.
+Natasha: Oooo the year-slider scale adds a unique touch to the map. It might be hard to execute with all the information we’re including but I think it gives our map a good range so it’s more useful to users. I also like the fact that we could include details in the popup, it helps give meaning behind numbers.
 
 Zona: Yeah I think the year slidebar is a really cool idea to show the change and I also think that having the subcategories under the Data Menu bar would be really helpful to viewers because it explains in more detail about how each topic affects us.
 
