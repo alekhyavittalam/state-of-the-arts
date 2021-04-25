@@ -8,16 +8,17 @@
 
 Natasha: I liked the idea of including the conclusions in the navigation page, it helps explain our purpose as well. I also liked the clickable aspect of the sidebar to show the top 5 countries, it increases user interactivity.
 
-Zona:
+Zona: I really like the Top 5 countries information in the sidebar that shows the low deaths and pollution data. Also, I like the slidebar you have for the year to show the changes that have occurred through time!
+
 
 <h3> Natasha's </h3>
 <img src="https://raw.githubusercontent.com/natgrace/state-of-the-arts/main/Week4/images/natashamm.jpg">
 
 <h3> Reactions </h3>
 
-Alekhya:I like how every idea goes back to the central theme of user experience. I really like how you considered students and policy makers as part of the project as well. I like both options of sidebar and especially like the popups interaction which we could include in our project.
+Alekhya: I like how every idea goes back to the central theme of user experience. I really like how you considered students and policy makers as part of the project as well. I like both options of sidebar and especially like the popups interaction which we could include in our project.
 
-Zona:
+Zona: I like how all the ideas in the mind map connect back to the user experience and it’s super clear what each function is based on the color coding for the workflow of the web mapping. I think it’s cool that you included the sidebar as something that will show up in the map instead of just attached to the side of the screen; that could be cool for us to try to explore that layout!
 
 <h3> Zona's </h3>
 <img src="https://raw.githubusercontent.com/natgrace/state-of-the-arts/main/Week4/images/zonamm.png">
@@ -38,7 +39,7 @@ Natasha: I liked the idea of color coding the different parts of the map, I thin
 
 Natasha:Oooo I like the idea of a year-slider scale. It might be hard to execute with all the information we’re including but I think it gives our map a good range so it’s more useful to users. I also like the fact that we could include details in the popup, it helps give meaning behind numbers.
 
-Zona:
+Zona: Yeah I think the year slidebar is a really cool idea to show the change and I also think that having the subcategories under the Data Menu bar would be really helpful to viewers because it explains in more detail about how each topic affects us.
 
 <h3> Natasha's </h3>
 <img src="https://raw.githubusercontent.com/natgrace/state-of-the-arts/main/Week4/images/natashac8.jpg">
@@ -47,7 +48,7 @@ Zona:
 
 Alekhya: I like the markers to differentiate between average/low pollution levels and high level pollution. I also like the menu bar to help users navigate through the website.
 
-Zona: 
+Zona: I love how you used different symbols and colors for the markers to show how bad the pollution is in certain areas. I think having certain colors to represent the cloudy areas and popups for the markers on the map would be a fun way to make everything more interactive and informative at the same time. 
 
 <h3> Zona's </h3>
 <img src="https://raw.githubusercontent.com/natgrace/state-of-the-arts/main/Week4/images/zonamm.png">
