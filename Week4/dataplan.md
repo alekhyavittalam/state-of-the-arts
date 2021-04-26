@@ -9,4 +9,4 @@
 
 
 ## Description
-
+These datasets will be downloaded into csv files so that it can be read through our code. Some of these datasets do not have the latitude or longitude, but others have it so we will use combine the information from the difference sources to create our web mapping for climate change around the world. We are also going to be looking at the causes from indoor and ourdoor air pollution.
