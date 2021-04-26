@@ -1,4 +1,4 @@
-# Data Plan - Assignment 2
+# Data Plan
 
 ## Datasets
 
