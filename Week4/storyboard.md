@@ -51,7 +51,7 @@ Alekhya: I like the markers to differentiate between average/low pollution level
 Zona: I love how you used different symbols and colors for the markers to show how bad the pollution is in certain areas. I think having certain colors to represent the cloudy areas and popups for the markers on the map would be a fun way to make everything more interactive and informative at the same time. 
 
 <h3> Zona's </h3>
-<img src="https://raw.githubusercontent.com/natgrace/state-of-the-arts/main/Week4/images/zonamm.png">
+<img src="https://github.com/alekhyavittalam/state-of-the-arts/blob/dca15d98d21466a55120420e6987658f66d4230a/Week4/images/zonac8.jpg">
 
 <h3> Reactions </h3>
 
