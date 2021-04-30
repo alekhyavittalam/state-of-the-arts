@@ -1,6 +1,6 @@
-# State-of-the-Arts
+# State-of-the-Climate
 <h1>Introduction</h1>
-<b>Group name:</b> State-of-the-Arts
+<b>Group name:</b> State-of-the-Climate
 
 
 <b>Description:</b> "Death rates from air pollution are highest in low-income countries." - ourworldindata.org
@@ -53,4 +53,3 @@ Web mapping will allow us to visualize countries' carbon footprints and will als
 
 [Climate Change Indicators: Heat Related Deaths](https://www.epa.gov/climate-indicators/climate-change-indicators-heat-related-deaths)
 
-[U.S. Pollution Data: Pollution in the U.S. since 2000](https://www.kaggle.com/sogun3/uspollution)
