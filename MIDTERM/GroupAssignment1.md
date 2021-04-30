@@ -55,7 +55,7 @@ Web mapping will allow us to visualize countries' carbon footprints and will als
 ## Description
 These datasets will be downloaded into csv files so that it can be read through our code. Some of these datasets do not have the latitude or longitude, but others have it so we will combind the information from the difference sources to create our web mapping for climate change around the world. We are also going to be looking at the causes from indoor and ourdoor air pollution and how it correlates to global poverty. On the map, we will have different colors to represent the climate situation and a legend that links to parts of the map with more or less pollution as well as locations with low and high income levels.
 
-<h1> Storyboard Collection </h1> 
+<h1> Storyboard UX Components </h1> 
 
 <img src="https://raw.githubusercontent.com/natgrace/state-of-the-arts/main/Week4/images/Storyboard1.JPG">
 
