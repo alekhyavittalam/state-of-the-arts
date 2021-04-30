@@ -45,15 +45,6 @@ Web mapping will allow us to visualize countries' carbon footprints and will als
 - Python/R: to clean the data before implementing it into our website
 - Leaflet (subject to change) and Javascript: to make the maps and give it it’s necessary functions
 
-<h1>Data</h1>
-
-[Global and City Yearly Average Temperatures](https://data.world/kacurtis/global-and-city-yearly-average-temperatures-1750-2015) 
-
-[Industrial Emmissions and Integrated Pollution Control Facilities](https://data.world/ie-env-protection/232e397c-0f28-4a45-83fa-2fa559133058) 
-
-[Climate Change Indicators: Heat Related Deaths](https://www.epa.gov/climate-indicators/climate-change-indicators-heat-related-deaths)
-
-
 # Data Plan
 
 ## Datasets
