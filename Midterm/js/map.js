@@ -41,7 +41,7 @@ function readCSV(path){
 
 function mapCSV(data){
 
-    let circleOptionsHigh = {
+    let circleOptions = {
         radius: 15,
         weight: 1,
         color: 'white',
@@ -104,7 +104,7 @@ let addLayers = {
     "Low Pollution": lowpollution_markers,
 }
 
-map.fitBounds(highpollution_markers.getBounds());
+map.fitBounds(lowpollution_markers.getBounds());
 }
 
 
