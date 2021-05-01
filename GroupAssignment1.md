@@ -47,10 +47,11 @@ Web mapping will allow us to visualize countries' carbon footprints and will als
 
 <h1>Data</h1>
 
-[Global and City Yearly Average Temperatures](https://data.world/kacurtis/global-and-city-yearly-average-temperatures-1750-2015) 
 
-[Industrial Emmissions and Integrated Pollution Control Facilities](https://data.world/ie-env-protection/232e397c-0f28-4a45-83fa-2fa559133058) 
+<h1> Storyboard Collection </h1> 
 
-[Climate Change Indicators: Heat Related Deaths](https://www.epa.gov/climate-indicators/climate-change-indicators-heat-related-deaths)
+<img src="https://raw.githubusercontent.com/natgrace/state-of-the-arts/main/Week4/images/Storyboard1.JPG">
 
-[U.S. Pollution Data: Pollution in the U.S. since 2000](https://www.kaggle.com/sogun3/uspollution)
+<img src="https://github.com/alekhyavittalam/state-of-the-arts/blob/main/Week4/images/Storyboard2.jpg">
+
+<img src="https://github.com/alekhyavittalam/state-of-the-arts/blob/5c6434a32365a410a821ae2d53c86a4cc16caf7a/Week4/images/Untitled_Artwork.jpeg">
