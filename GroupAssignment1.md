@@ -48,7 +48,7 @@ Web mapping will allow us to visualize countries' carbon footprints and will als
 <h1>Data</h1>
 
 
-<h1> Storyboard Collection </h1> 
+<h1> Storyboard UX Components </h1> 
 
 <img src="https://raw.githubusercontent.com/natgrace/state-of-the-arts/main/Week4/images/Storyboard1.JPG">
 
