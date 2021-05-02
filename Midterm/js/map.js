@@ -71,7 +71,7 @@ function mapCSV(data){
 
 data.data.forEach(function(item,index){
     if(item['Outdoor.air.pollution..IHME..2019.'] > 6.00){
-        circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
+        //circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
         circleOptions.fillColor = 'red'
         let highpollution_marker = L.circleMarker([item.latitude,item.longitude], circleOptions).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
             this.openPopup()
@@ -84,7 +84,7 @@ data.data.forEach(function(item,index){
 }
 
 else{
-    circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
+    //circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
     circleOptions.fillColor = 'green'
     let lowpollution_marker = L.circleMarker([item.latitude,item.longitude], circleOptions).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
         this.openPopup()
@@ -104,7 +104,9 @@ let addLayers = {
     "Low Pollution": lowpollution_markers,
 }
 
-map.fitBounds(lowpollution_markers.getBounds());
+L.control.layers(null,addLayers).addTo(map);
+
+map.fitBounds(highpollution_markers.getBounds());
 }
 
 
