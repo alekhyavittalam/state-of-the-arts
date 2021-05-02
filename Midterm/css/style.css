@@ -35,17 +35,28 @@ body {
 
 .header {
 	grid-area: header;
-	padding-top:20px;
-	padding-left: 20px;
+	padding-top:10px;
+	padding-bottom: 10px;
 	float: left;
-	background-color: #333;
-	color: white;
+	background-color: #0a0a0a;
+	color: #c98686;
+	font-style: italic;
+	text-transform:uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif; 
 	font-size: 20px;
 }
 
 
 nav{
-	float: right;
+	text-align:center;
+    width:750px;
+	margin:0 auto;
+    font-size:7px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav ul{
@@ -56,19 +67,30 @@ nav ul{
 
 nav li{
 	float: left;
-	margin-left: 70px;
-	padding-top: 0px;
+	text-align: center;
+	margin-left: 90px;
+	padding-top: 10px;
 }
 
+nav a.active {
+	background-color: #fff4ec;
+	color: #c98686;
+  }
+
 nav a{
-	color: #FFFFFF;
+
+	color: #f2b880;
+	display:inline-block;
+    width: 150px;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 12px;
 	text-transform: uppercase;
+	border-bottom:1px solid transparent;  
+    border-top:1px solid transparent;   
 }
 
 nav a:hover{
-	color:crimson;
+	color:rgb(139, 146, 209);
 }
 
 nav a::before{
@@ -86,10 +108,11 @@ nav a::before{
 }
 
 .sidebar {
-	color: white;
+	color: #0e0d0d;
 	grid-area: sidebar;
 	padding:10px;
-	background-color: #555;
+	text-align: center;
+	background-color: #fff4ec;
 	overflow: auto;
 }
 
@@ -104,16 +127,21 @@ nav a::before{
 .footer {
 	grid-area: footer;
 	padding:10px;
-	background-color: rgb(175, 175, 175);
+	background-color: #fff4ec;
 }
 
 .sidebar-item {	/* border: 1px solid gray; */
 	padding: 2px;	/* background-color: #333; */
 	float:left;
 	cursor:pointer;
-	color: rgb(255, 79, 79);
+	color: #f6ecf8;
 	font-size: 1em;
 }
 .sidebar-item:hover {
 	background-color: rgb(255, 0, 0);
 }
+
+/*The following code has made sidebar sticky and floating*/
+
+/*https://tickera.com/blog/creating-sidebar-scrolls */
+
