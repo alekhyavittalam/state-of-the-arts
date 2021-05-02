@@ -104,6 +104,8 @@ let addLayers = {
     "Low Pollution": lowpollution_markers,
 }
 
+L.control.layers(null,addLayers).addTo(map);
+
 map.fitBounds(highpollution_markers.getBounds());
 }
 
