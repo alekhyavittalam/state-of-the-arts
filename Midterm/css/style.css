@@ -130,3 +130,10 @@ nav a::before{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.about {
+	display: center;
+	background-color: #f8f9fa;
+	padding: 20px;
+	height: auto;
+}
