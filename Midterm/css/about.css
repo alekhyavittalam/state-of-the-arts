@@ -4,18 +4,15 @@ body,html {
 	width:100%;
 }
 
-#map {
-	height: 100%;
-}
 
 body {
 	display: grid;
 	font-family: Arial, Helvetica, sans-serif;
 	grid-template-rows: 60px 1fr 40px;
-	grid-template-columns: 300px 1fr;
+	grid-template-columns: 1fr;
 	grid-template-areas: 
 	"header header"
-	"sidebar content"
+	"about about"
 	"footer footer";
 }
 
@@ -96,22 +93,7 @@ nav a::before{
 
 }
 
-.sidebar {
-	color: aliceblue;
-	grid-area: sidebar;
-	padding:10px;
-	text-align: center;
-	background-color: #050505;
-	overflow: auto;
-}
 
-.content {
-	grid-area: content;
-}
-
-.content2{
-	padding-left: 20px;
-}
 
 .footer {
 	grid-area: footer;
@@ -119,43 +101,12 @@ nav a::before{
 	background-color: #fff4ec;
 }
 
-.sidebar-item {	/* border: 1px solid gray; */
-	padding: 2px;	/* background-color: #333; */
-	float:left;
-	cursor:pointer;
-	color: #f6ecf8;
-	font-size: 1em;
-}
-.sidebar-item:hover {
-	background-color: rgb(255, 0, 0);
-}
-.photo-row {
-	/*flex: 25%;*/
-	/*padding: 5px;*/
-	display: center;
-}
-
-.pic{
-	/*border: 1px solid rgba(0, 0, 0, 0.8);*/
-	text-align: center;
-	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
-	background-color: #f8f9fa;
-	padding: 20px;
-	height: auto;
-}
-
-.pic img {
-	display: block;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 .about {
 	display: center;
-	background-color: #f8f9fa;
-	padding: 20px;
+    color:aliceblue ;
+	background-color: #020202;
+	text-align: center;
 	height: auto;
+    line-height: 30px;
 }
