@@ -70,10 +70,10 @@ function mapCSV(data){
     
     //loop through each entry
     data.data.forEach(function(item,index){
-        //let marker = L.circleMarker([item.latitude,item.longitude], circleOptions).on('mouseover',function(){
-            //this.bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).openPopup()
-        let marker = L.circleMarker([item.latitude,item.longitude], circleOptions).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
-                this.openPopup()
+        let marker = L.circleMarker([item.latitude,item.longitude], circleOptions).on('mouseover',function(){
+            this.bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).openPopup()
+       // let marker = L.circleMarker([item.latitude,item.longitude], circleOptions).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
+                //this.openPopup()
         })
 
         markers.addLayer(marker)
