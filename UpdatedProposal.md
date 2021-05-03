@@ -1,6 +1,6 @@
-# State-of-the-Arts
+# State-of-the-Climate
 <h1>Introduction</h1>
-<b>Group name:</b> State-of-the-Arts
+<b>Group name:</b> State-of-the-Climate
 
 
 <b>Description:</b> "Death rates from air pollution are highest in low-income countries." - ourworldindata.org
@@ -32,8 +32,8 @@ Web mapping will allow us to visualize countries' carbon footprints and will als
 |Week 4|Build the foundation of website and map <br> (Data and Design)|
 |Week 5|Design the map <br> Input data and pictures <br> Test run|
 |Week 6|Presentations <br> Design and edit map based on feedback|
-|Week 7|Implement feedback received <br> Continue editing code and design|
-|Week 8|Include interactivity aspects <br> Test run <br> Improve design and style of map|
+|Week 7|Implement feedback received <br> Add choropleth layer <br> Continue editing code and design|
+|Week 8|Include interactivity aspects <br> Add Pop ups <br> Test run <br> Improve design and style of map|
 |Week 9|Finalize website <br> User test website|
 |Week 10|Script preparations <br> Final presentations|
 
@@ -42,8 +42,8 @@ Web mapping will allow us to visualize countries' carbon footprints and will als
 
 - GitHub: used to work on codes together/collaborate
 - HTML and CSS: making and designing/stylizing the map
-- Python/R: to clean the data before implementing it into our website
-- Leaflet (subject to change) and Javascript: to make the maps and give it it’s necessary functions
+- R: to clean the data before implementing it into our website
+- Leaflet and Javascript: to make the maps and give it it’s necessary functions
 
 # Data Plan
 
