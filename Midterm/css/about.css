@@ -106,7 +106,9 @@ nav a::before{
 	display: center;
     color:#0A1126 ;
 	background-color: #BCE3F8;
-	text-align: center;
+	/*text-align: center;*/
 	height: auto;
     line-height: 30px;
+	padding-left: 20px;
+	padding-top: 20px;
 }
