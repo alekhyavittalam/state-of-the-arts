@@ -29,8 +29,8 @@ body {
 	padding-top:10px;
 	padding-bottom: 10px;
 	float: left;
-	background-color: #0A1126;
-	color: #c98686;
+	background-color: #71879A;
+	color: #0A1126;
 	font-style: italic;
 	text-transform:uppercase;
 	letter-spacing: 2px;
@@ -71,7 +71,7 @@ nav a.active {
 
 nav a{
 
-	color: #9D7587;
+	color: #0A1126;
 	display:inline-block;
     width: 150px;
 	text-decoration: none;
@@ -82,7 +82,7 @@ nav a{
 }
 
 nav a:hover{
-	color:rgb(139, 146, 209);
+	color:#FF6962;
 }
 
 nav a::before{
@@ -127,7 +127,7 @@ nav a::before{
 .footer {
 	grid-area: footer;
 	padding:10px;
-	background-color: #fff4ec;
+	background-color: #71879A;
 }
 
 .sidebar-item {	/* border: 1px solid gray; */
