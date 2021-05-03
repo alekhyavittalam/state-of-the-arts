@@ -2,7 +2,7 @@
 let map;
 let lat = 0;
 let lon = 0;
-let zl = 3;
+let zl = 18;
 let path = "data/DataMerge_2017.csv";
 let markers = L.featureGroup();
 let highpollution_markers = L.featureGroup();
@@ -45,7 +45,7 @@ function mapCSV(data){
         radius: 5,
         weight: 1,
         color: 'white',
-        fillColor: 'red',
+        fillColor: '#FF6962',
         fillOpacity: 1,
         //radius: item['Outdoor.air.pollution..IHME..2019.']*100
     }
@@ -54,7 +54,7 @@ function mapCSV(data){
         radius: 5,
         weight: 1,
         color: 'white',
-        fillColor: 'green',
+        fillColor: '#5EA777',
         fillOpacity: 1,
         //radius: item['Outdoor.air.pollution..IHME..2019.']*100
     }
