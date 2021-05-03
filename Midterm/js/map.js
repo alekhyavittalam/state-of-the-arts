@@ -98,14 +98,16 @@ lowpollution_markers.addTo(map);
 })
 
 let addLayers = {
-    "High Pollution": highpollution_markers,
-    "Low Pollution": lowpollution_markers,
+    "High Death Rates": highpollution_markers,
+    "Low Death Rates": lowpollution_markers,
 }
 
 L.control.layers(null,addLayers).addTo(map);
 
 map.fitBounds(lowpollution_markers.getBounds());
+
 }
+
 
 
 

@@ -29,8 +29,8 @@ body {
 	padding-top:10px;
 	padding-bottom: 10px;
 	float: left;
-	background-color: #0a0a0a;
-	color: #c98686;
+	background-color:  #71879A;
+	color: #0A1126;
 	font-style: italic;
 	text-transform:uppercase;
 	letter-spacing: 2px;
@@ -70,7 +70,7 @@ nav a.active {
 
 nav a{
 
-	color: #f2b880;
+	color: #0A1126;
 	display:inline-block;
     width: 150px;
 	text-decoration: none;
@@ -81,7 +81,7 @@ nav a{
 }
 
 nav a:hover{
-	color:rgb(139, 146, 209);
+	color:#FF6962;
 }
 
 nav a::before{
@@ -100,23 +100,30 @@ nav a::before{
 .footer {
 	grid-area: footer;
 	padding:10px;
-	background-color: #fff4ec;
+	background-color: #71879A;
 }
 
 .photo-row {
 	/*flex: 25%;*/
 	/*padding: 5px;*/
-	display: center;
+	/*display: center;*/
+	content: "";
+  	clear: both;
+  	display: table;
+	background-color:#F2EFE9 ;
+	padding: 70px;
 }
 
 .pic{
 	/*border: 1px solid rgba(0, 0, 0, 0.8);*/
 	text-align: center;
 	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
-	background-color: #020202;
-	padding: 20px;
-	height: auto;
-    color: aliceblue;
+	float: left;
+	width: 33.33%;
+	background-color: #F2EFE9;
+	padding: 0px;
+	/*height: auto;*/
+    color: #0A1126;
 }
 
 .pic img {
@@ -126,4 +133,13 @@ nav a::before{
 	border-radius: 50%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.team {
+	/*display: center;*/
+    color:#0A1126 ;
+	background-color: #F2EFE9;
+	text-align: center;
+	height: auto;
+    line-height: 30px;
 }
