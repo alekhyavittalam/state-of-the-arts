@@ -4,7 +4,7 @@ let lat = 0;
 let lon = 0;
 let zl = 3;
 let path = "data/DataMerge_2017.csv";
-//let markers = L.featureGroup();
+let markers = L.featureGroup();
 let highpollution_markers = L.featureGroup();
 let lowpollution_markers = L.featureGroup();
 
@@ -43,15 +43,15 @@ function readCSV(path){
 
 function mapCSV(data){
 
-    let circleOptionsHigh = {
-        radius: 15,
+    let circleOptions = {
+        radius: 5,
         weight: 1,
         color: 'white',
         fillColor: 'red',
         fillOpacity: 1,
         //radius: item['Outdoor.air.pollution..IHME..2019.']*100
     }
-
+/*
     let circleOptionsLow = {
         radius: 15,
         weight: 1,
@@ -60,12 +60,20 @@ function mapCSV(data){
         fillOpacity: 1,
         //radius: item['Outdoor.air.pollution..IHME..2019.']*100
     }
+*/
+    $(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyTo([25.930414, 50.637772], 5)">Bahrain</div>`)
+    $(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyTo([26.820553, 30.802498], 5)">Egypt</div>`)
+    $(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyTo([29.31166, 47.481766], 5)">Kuwait</div>`)
+    $(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyTo([38.963745, 35.243322], 5)">Turkey</div>`)
+    $(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyTo([35.86166, 104.195397], 5)">China</div>`)
 
-    /*
+    
     //loop through each entry
     data.data.forEach(function(item,index){
-        let marker = L.circleMarker([item.latitude,item.longitude], circleOptions).on('mouseover',function(){
-            this.bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).openPopup()
+        //let marker = L.circleMarker([item.latitude,item.longitude], circleOptions).on('mouseover',function(){
+            //this.bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).openPopup()
+        let marker = L.circleMarker([item.latitude,item.longitude], circleOptions).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
+                this.openPopup()
         })
 
         markers.addLayer(marker)
@@ -78,14 +86,10 @@ function mapCSV(data){
 
     map.fitBounds(markers.getBounds());
 }
-*/ 
 
-$(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyToIndex([25.930414, 50.637772], 5)">Bahrain</div>`)
-$(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyToIndex([26.820553, 30.802498], 5)">Egypt</div>`)
-$(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyToIndex([29.31166, 47.481766], 5)">Kuwait</div>`)
-$(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyToIndex([38.963745, 35.243322], 5)">Turkey</div>`)
-$(".sidebar").append(`<div class = "sidebar-item" onclick = "map.flyToIndex([35.86166, 104.195397], 5)">China</div>`)
 
+
+/*
 data.data.forEach(function(item,index){
     if(item['Outdoor.air.pollution..IHME..2019.'] > 6.00){
         //circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
@@ -127,14 +131,14 @@ L.control.layers(null,addLayers).addTo(map);
 
 map.fitBounds(lowpollution_markers.getBounds());
 }
-
+*/
 function flyToIndex(index){
     // yk: the call to pan to the map to a given location is different from the loop
     map.setZoom(5);
     map.panTo(lowpollution_markers.getLayers()[index].getLatLng());
     markers.getLayers()[index].openPopup()
 }
-//Add clickable buttons to each country?
+
 
 /*
 function panToImage(index){
