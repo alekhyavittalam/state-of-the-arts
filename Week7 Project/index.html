@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>World Choropleth</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<!-- classy brew -->
+	<script src="js/classybrew.js"></script> 
+
+</head>
+<body>
+
+	<div class="header">
+		<center> Impact of Outdoor Pollution </center>
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a href = "index.html">Home</a></li>
+					<li><a href = "about.html">About</a></li>
+					<li><a href = "ourteam.html">Our Team</a></li>
+				</ul>
+			</nav>
+		</div>	
+	</div>
+
+	<div class="sidebar">
+		<h3>Percentage of Deaths due to Air Pollution</h3>
+		<p>"Death rates from air pollution are highest in low income countries." 
+			<br>
+			&emsp;- ourworldindata.org
+			<br>
+		</p>
+		<p>
+		This map shows if the above statement is true. 
+		<br>
+		<br>
+		</p>
+		<p>
+			<h3>Top 5 countries with highest death rates due to pollution. </h3>
+		</p>
+
+		<img id = "add" src="pollution.jpeg"></img>
+		
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+	<div class="footer">
+		Data source: <a href="https://ourworldindata.org/outdoor-air-pollution">Outdoor Air Pollution Death Rates</a>
+	</div>
+
+	<script src="js/map.js"></script>
+
+</body>
+</html>
