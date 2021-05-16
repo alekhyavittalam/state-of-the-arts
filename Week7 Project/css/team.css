@@ -35,6 +35,14 @@
 	color: #f13c20;
 }
 
+.title{
+	top: 50px;
+	right: 80px;
+	position: absolute;
+	text-decoration: none;
+	cursor:default;
+}
+
 #map {
 	height: 100%;
 }
