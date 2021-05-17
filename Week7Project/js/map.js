@@ -62,7 +62,7 @@ function mapGeoJSON(field, num_class, scheme){
 	// based on the provided field, enter each value into the array
 	geojson_data.features.forEach(function(item,index){
 		if(item.properties[field] != undefined){
-			values.push(item.properties[field])
+			values.push(parseFloat(item.properties[field]))
 
 		}
 		
