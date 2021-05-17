@@ -110,12 +110,13 @@ map.fitBounds(lowpollution_markers.getBounds());
 
 
 
-
+/*
 function flyToIndex(index){
     map.setZoom(5);
     map.panTo(lowpollution_markers.getLayers()[index].getLatLng());
-    //markers.getLayers()[index].openPopup()
+    //highpollution_markers.getLayers()[index].openPopup()
 }
+*/
 
 
 /*

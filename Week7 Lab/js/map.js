@@ -6,7 +6,7 @@ let zl = 3;
 let path = '';
 
 // put this in your global variables
-let geojsonPath = 'data/world.json';
+let geojsonPath = 'data/PollutionLevel2016.json';
 let geojson_data;
 let geojson_layer;
 
@@ -42,7 +42,7 @@ function getGeoJSON(){
 		geojson_data = data;
 
 		// call the map function
-		mapGeoJSON('pop_est') // add a field to be used
+		mapGeoJSON('pollution_level') // add a field to be used
 	})
 }
 
