@@ -42,11 +42,11 @@ function getGeoJSON(){
 		geojson_data = data;
 
 		// call the map function
-		mapGeoJSON('pollution_level') // add a field to be used
+		mapGeoJSON(`pollution_level`,5, `quantiles`) // add a field to be used
 	})
 }
 
-function mapGeoJSON(field){
+function mapGeoJSON(field, num_class, scheme){
 
 	// clear layers in case it has been mapped already
 	if (geojson_layer){
@@ -61,12 +61,16 @@ function mapGeoJSON(field){
 
 	// based on the provided field, enter each value into the array
 	geojson_data.features.forEach(function(item,index){
-		values.push(item.properties[field])
+		if(item.properties[field] != undefined){
+			values.push(item.properties[field])
+
+		}
+		
 	})
 
 	// set up the "brew" options
 	brew.setSeries(values);
-	brew.setNumClasses(8);
+	brew.setNumClasses(num_class);
 	brew.setColorCode('YlOrRd');
 	brew.classify('quantiles');
 
@@ -181,7 +185,7 @@ function createInfoPanel(){
 	info_panel.update = function (properties) {
 		// if feature is highlighted
 		if(properties){
-			this._div.innerHTML = `<b>${properties.name}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+			this._div.innerHTML = `<b>${properties.country}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
 		}
 		// if feature is not highlighted
 		else
