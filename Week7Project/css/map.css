@@ -33,7 +33,7 @@
 body {
 	display: grid;
 	font-family: Arial, Helvetica, sans-serif;
-	grid-template-rows: 100px 420px 100px;
+	grid-template-rows: 100px 420px 150px;
 	grid-template-columns: 100%;
 	grid-template-areas: 
 	"header header"
