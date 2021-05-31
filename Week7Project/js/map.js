@@ -203,3 +203,11 @@ function createInfoPanel(){
 
 	info_panel.addTo(map);
 }
+
+function zoomTo(geoid){
+
+	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.properties.GEO_ID === geoid)
+
+	map.fitBounds(zoom2poly[0].getBounds())
+
+}
