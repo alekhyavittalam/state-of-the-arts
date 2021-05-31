@@ -11,7 +11,7 @@ let geojson_data;
 let geojson_layer;
 
 let brew = new classyBrew();
-let fieldtomap = 'Poverty Level 1996 - 2017';
+let fieldtomap;
 
 let legend = L.control({position: 'bottomright'});
 let info_panel = L.control();
@@ -27,9 +27,16 @@ $( document ).ready(function() {
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
+	{
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		id: 'dark-v10',
+		tileSize: 512,
+		zoomOffset: -1,
+		accessToken: 'pk.eyJ1IjoibmF0Z3JhY2UiLCJhIjoiY2tvOTFhOGhyMWNkdjJvcW54c2dqbWdtNSJ9.nqW3nHZCwe2PUcfo4Pr5kw'
 	}).addTo(map);
+
 }
 
 // function to get the geojson data
@@ -42,11 +49,11 @@ function getGeoJSON(){
 		geojson_data = data;
 
 		// call the map function
-		mapGeoJSON(fieldtomap,5,'YlOrRd','quantiles') // add a field to be used
+		mapGeoJSON(`poverty_level`,5, `quantiles`) // add a field to be used
 	})
 }
 
-function mapGeoJSON(field,num_classes,color,scheme){
+function mapGeoJSON(field, num_class, scheme){
 
 	// clear layers in case it has been mapped already
 	if (geojson_layer){
@@ -70,9 +77,9 @@ function mapGeoJSON(field,num_classes,color,scheme){
 
 	// set up the "brew" options
 	brew.setSeries(values);
-	brew.setNumClasses(num_classes);
-	brew.setColorCode(color);
-	brew.classify(scheme);
+	brew.setNumClasses(num_class);
+	brew.setColorCode('Purples');
+	brew.classify('quantiles');
 
 	// create the layer and add to map
 	geojson_layer = L.geoJson(geojson_data, {
@@ -97,7 +104,6 @@ function getStyle(feature){
 	}
 }
 
-/*
 // return the color for each feature
 function getColor(d) {
 
@@ -110,7 +116,6 @@ function getColor(d) {
 		   d > 10000000   ? '#FED976' :
 					  '#FFEDA0';
 }
-*/
 
 function createLegend(){
 	legend.onAdd = function (map) {
@@ -134,30 +139,6 @@ function createLegend(){
 		};
 		
 		legend.addTo(map);
-}
-
-function createInfoPanel(){
-
-	info_panel.onAdd = function (map) {
-		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-		this.update();
-		return this._div;
-	};
-
-	// method that we will use to update the control based on feature properties passed
-	info_panel.update = function (properties) {
-		// if feature is highlighted
-		if(properties){
-			this._div.innerHTML = `<b>${properties.country}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
-		}
-		// if feature is not highlighted
-		else
-		{
-			this._div.innerHTML = 'Hover over a country';
-		}
-	};
-
-	info_panel.addTo(map);
 }
 
 // Function that defines what will happen on user interactions with each feature
@@ -184,70 +165,8 @@ function highlightFeature(e) {
 		layer.bringToFront();
 	}
 
-	info_panel.update(layer.feature.properties);
-	createDashboard(layer.feature.properties)
+	info_panel.update(layer.feature.properties)
 }
-
-function createDashboard(properties){
-
-	// clear dashboard
-	$('.dashboard').empty();
-
-	console.log(properties)
-
-	// chart title
-	let title = 'Poverty Level in ' +properties['geounit'];
-
-	// data values
-	let data = [
-
-        5,10,6.5,7,2
-        
-    ];
-
-	// data fields
-	let fields = [
-
-        '2000',
-        '2005',
-        '2010',
-        '2016',
-        '2017',
-        
-    ];
-
-	// set chart options
-	let options = {
-		chart: {
-			type: 'bar',
-			height: 300,
-			animations: {
-				enabled: true,
-			}
-		},
-		title: {
-			text: title,
-		},
-		plotOptions: {
-			bar: {
-				horizontal: true
-			}
-		},
-		series: [
-			{
-				data: data
-			}
-		],
-		xaxis: {
-			categories: fields
-		}
-	};
-
-	// create the chart
-	let chart = new ApexCharts(document.querySelector('.dashboard'), options)
-	chart.render()
-}
-
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
 function resetHighlight(e) {
@@ -261,3 +180,26 @@ function zoomToFeature(e) {
 	map.fitBounds(e.target.getBounds());
 }
 
+function createInfoPanel(){
+
+	info_panel.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+		this.update();
+		return this._div;
+	};
+
+	// method that we will use to update the control based on feature properties passed
+	info_panel.update = function (properties) {
+		// if feature is highlighted
+		if(properties){
+			this._div.innerHTML = `<b>${properties.country}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+		}
+		// if feature is not highlighted
+		else
+		{
+			this._div.innerHTML = 'Hover Over A Country';
+		}
+	};
+
+	info_panel.addTo(map);
+}
