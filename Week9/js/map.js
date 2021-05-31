@@ -11,7 +11,7 @@ let geojson_data;
 let geojson_layer;
 
 let brew = new classyBrew();
-let fieldtomap;
+let fieldtomap=`poverty_level`;
 
 let legend = L.control({position: 'bottomright'});
 let info_panel = L.control();
@@ -49,11 +49,11 @@ function getGeoJSON(){
 		geojson_data = data;
 
 		// call the map function
-		mapGeoJSON(`poverty_level`,5, `quantiles`) // add a field to be used
+		mapGeoJSON(fieldtomap,5, 'Purples',`quantiles`) // add a field to be used
 	})
 }
 
-function mapGeoJSON(field, num_class, scheme){
+function mapGeoJSON(field, num_classes, color,scheme){
 
 	// clear layers in case it has been mapped already
 	if (geojson_layer){
@@ -77,9 +77,9 @@ function mapGeoJSON(field, num_class, scheme){
 
 	// set up the "brew" options
 	brew.setSeries(values);
-	brew.setNumClasses(num_class);
-	brew.setColorCode('Purples');
-	brew.classify('quantiles');
+	brew.setNumClasses(num_classes);
+	brew.setColorCode(color);
+	brew.classify(scheme);
 
 	// create the layer and add to map
 	geojson_layer = L.geoJson(geojson_data, {
@@ -91,6 +91,7 @@ function mapGeoJSON(field, num_class, scheme){
 
 	createLegend();
 	createInfoPanel();
+	createTable();
 }
 
 function getStyle(feature){
@@ -103,7 +104,7 @@ function getStyle(feature){
 		fillOpacity: 0.8
 	}
 }
-
+/*
 // return the color for each feature
 function getColor(d) {
 
@@ -116,7 +117,7 @@ function getColor(d) {
 		   d > 10000000   ? '#FED976' :
 					  '#FFEDA0';
 }
-
+*/
 function createLegend(){
 	legend.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend'),
@@ -166,14 +167,117 @@ function highlightFeature(e) {
 	}
 
 	info_panel.update(layer.feature.properties)
+	createDashboard(layer.feature.properties)
 }
+
+function createDashboard(properties){
+
+	// clear dashboard
+	$('.dashboard').empty();
+
+	console.log(properties)
+
+	// chart title
+	let title = 'Poverty Level in ' +properties['geounit'];
+
+	// data values
+	let data = [
+
+        0.5,0.6,10
+       
+        
+    ];
+
+	// data fields
+	let fields = [
+
+        '2016',
+        '2017',
+        '2010',
+        
+    ];
+
+	// set chart options
+	let options = {
+		chart: {
+			type: 'bar',
+			height: 300,
+			animations: {
+				enabled: true,
+			}
+		},
+		title: {
+			text: title,
+		},
+		plotOptions: {
+			bar: {
+				horizontal: true
+			}
+		},
+		series: [
+			{
+				data: data
+			}
+		],
+		xaxis: {
+			categories: fields
+		}
+	};
+
+	// create the chart
+	let chart = new ApexCharts(document.querySelector('.dashboard'), options)
+	chart.render()
+}
+
+
+function createTable(){
+
+	// empty array for our data
+	let datafortable = [];
+
+	// loop through the data and add the properties object to the array
+	geojson_data.features.forEach(function(item){
+		datafortable.push(item.properties)
+	})
+
+	// array to define the fields: each object is a column
+	let fields = [
+		{ name: "geounit", type: "text"},
+		{ name: 'Year', type: 'number'},
+		{ name: 'poverty_level', type: 'number'},
+	]
+ 
+	// create the table in our footer
+	$(".footer").jsGrid({
+		width: "100%",
+		height: "400px",
+		
+		editing: true,
+		sorting: true,
+		paging: true,
+		autoload: true,
+ 
+		pageSize: 10,
+		pageButtonCount: 5,
+ 
+		data: datafortable,
+		fields: fields,
+		rowClick: function(args) { 
+			console.log(args);
+            zoomTo(args.item.GEO_ID)
+		},
+	});
+}
+
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
 function resetHighlight(e) {
 	geojson_layer.resetStyle(e.target);
 
 	info_panel.update(); //resets infopanel
+	
 }
+
 
 // on mouse click on a feature, zoom in to it
 function zoomToFeature(e) {
