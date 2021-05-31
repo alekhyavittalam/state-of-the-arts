@@ -264,7 +264,7 @@ function createTable(){
 		fields: fields,
 		rowClick: function(args) { 
 			console.log(args);
-            zoomTo(args.item.GEO_ID)
+            zoomTo(args.item.geounit)
 		},
 	});
 }
@@ -310,7 +310,7 @@ function createInfoPanel(){
 
 function zoomTo(geoid){
 
-	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.properties.GEO_ID === geoid)
+	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.properties.geounit === geoid)
 
 	map.fitBounds(zoom2poly[0].getBounds())
 
