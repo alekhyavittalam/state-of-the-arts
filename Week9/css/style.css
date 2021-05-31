@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+
+.html,body{
+	width: 100%;
+	height: 100%;
+	background: #EFE2BA;
+}
+
+.header ul{
+	display: inline-flex;
+	margin: 50px;
+}
+
+.header ul li{
+	list-style: none;
+	margin: 0 20px;
+	color: #4056A1;
+}
+
+.header a {
+	color: #4056a1
+}
+
+.header a:hover {
+	color: #f13c20;
+}
+
+.active{
+	color: #F13c20 !important ;
+}
+
+
+.banner{
+	width: 80%;
+	height: 70%;
+	top: 25%;
+	left: 130px;
+	position: absolute;
+	color: #4056A1;
+}
+
+.app-text{
+	width: 50%;
+	float: left;
+}
+
+.app-text h1{
+	font-size: 43px;
+	width: 640px;
+	position:relative;
+	margin-left: 40px;
+	cursor: default;
+}
+
+.app-text p{
+	padding-top: 5px;
+	padding-bottom: 10px;
+	font-size: 15px;
+	width: 640px;
+	cursor:default;
+	position: relative;
+	margin-left: 40px;
+	color: #030303; 
+}
+
+.app-picture {
+	width: 50%;
+	float: right;
+}
+
+.app-picture img{
+	width: 50%;
+	margin-top: -20px;
+	padding-left: 80px;
+}
+
+.map-btn{
+	padding-top: 10px;
+	margin-left: 40px;
+	display: inline-flex;
+}
+
+.map-btn-inner{
+	height: 40px;
+	width: 40px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	background-image: linear-gradient(#efe2ba,#efe2ba),
+	radial-gradient(circle at top left,#fd00da,#19d7f8);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	text-align: center;
+}
+
+.map-btn-inner  .fa{
+	padding: 13px 0;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.small{
+	padding-top: 12px;
+	margin: auto 20px;
+	cursor: default;
+	font-size: 12px;
+	color: #F13c20;
+	letter-spacing: 3px;
+}
+
