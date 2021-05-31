@@ -27,9 +27,16 @@ $( document ).ready(function() {
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
+	{
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		id: 'dark-v10',
+		tileSize: 512,
+		zoomOffset: -1,
+		accessToken: 'pk.eyJ1IjoibmF0Z3JhY2UiLCJhIjoiY2tvOTFhOGhyMWNkdjJvcW54c2dqbWdtNSJ9.nqW3nHZCwe2PUcfo4Pr5kw'
 	}).addTo(map);
+
 }
 
 // function to get the geojson data
@@ -71,7 +78,7 @@ function mapGeoJSON(field, num_class, scheme){
 	// set up the "brew" options
 	brew.setSeries(values);
 	brew.setNumClasses(num_class);
-	brew.setColorCode('YlOrRd');
+	brew.setColorCode('Purples');
 	brew.classify('quantiles');
 
 	// create the layer and add to map
@@ -190,7 +197,7 @@ function createInfoPanel(){
 		// if feature is not highlighted
 		else
 		{
-			this._div.innerHTML = 'Hover over a country';
+			this._div.innerHTML = 'Hover Over A Country';
 		}
 	};
 
