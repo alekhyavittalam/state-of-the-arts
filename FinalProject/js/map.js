@@ -4,6 +4,11 @@ let lat = 0;
 let lon = 0;
 let zl = 3;
 let path = '';
+let path2 = "data/DataMerge_2017.csv"
+let markers = L.featureGroup();
+let highpollution_markers = L.featureGroup();
+let lowpollution_markers = L.featureGroup();
+
 
 // put this in your global variables
 let geojsonPath = 'data/PovertyLevel.json';
@@ -21,6 +26,7 @@ let info_panel = L.control();
 $( document ).ready(function() {
 	createMap(lat,lon,zl);
 	getGeoJSON();
+	readCSV(path2);
 });
 
 // create the map
@@ -37,6 +43,82 @@ function createMap(lat,lon,zl){
 		accessToken: 'pk.eyJ1IjoibmF0Z3JhY2UiLCJhIjoiY2tvOTFhOGhyMWNkdjJvcW54c2dqbWdtNSJ9.nqW3nHZCwe2PUcfo4Pr5kw'
 	}).addTo(map);
 
+}
+// function to read csv data
+function readCSV(path){
+	Papa.parse(path, {
+		header: true,
+		download: true,
+		complete: function(data) {
+			console.log(data);
+			
+			// map the data
+			mapCSV(data);
+
+		}
+	});
+}
+
+function mapCSV(data){
+
+    let circleOptionsHigh = {
+        radius: 5,
+        weight: 1,
+        color: 'white',
+        fillColor: '#FF6962',
+        fillOpacity: 1,
+        //radius: item['Outdoor.air.pollution..IHME..2019.']*100
+    }
+
+    let circleOptionsLow = {
+        radius: 5,
+        weight: 1,
+        color: 'white',
+        fillColor: '#5EA777',
+        fillOpacity: 1,
+        //radius: item['Outdoor.air.pollution..IHME..2019.']*100
+    }
+
+	data.data.forEach(function(item,index){
+		if(item['Outdoor.air.pollution..IHME..2019.'] > 6.00){
+			//circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
+			//circleOptions.fillColor = 'red'
+			let highpollution_marker = L.circleMarker([item.latitude,item.longitude], circleOptionsHigh).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
+				this.openPopup()
+		})
+	
+		highpollution_markers.addLayer(highpollution_marker)
+	
+		//add entry to sidebar
+		//$('.sidebar').append(`<img src="${item.thumbnail_url}" onmouseover="panToImage(${index})">`)
+	}
+	
+	else{
+		//circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
+		//circleOptions.fillColor = 'green'
+		let lowpollution_marker = L.circleMarker([item.latitude,item.longitude], circleOptionsLow).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
+			this.openPopup()
+	})
+	
+	lowpollution_markers.addLayer(lowpollution_marker)
+	
+	}
+	
+	highpollution_markers.addTo(map);
+	lowpollution_markers.addTo(map);
+	
+	
+	})
+	
+	let addLayers = {
+		"High Death Rates": highpollution_markers,
+		"Low Death Rates": lowpollution_markers,
+	}
+	
+	L.control.layers(null,addLayers).addTo(map);
+	
+	map.fitBounds(lowpollution_markers.getBounds());
+	
 }
 
 // function to get the geojson data
