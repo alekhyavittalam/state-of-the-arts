@@ -11,12 +11,12 @@ let lowpollution_markers = L.featureGroup();
 
 
 // put this in your global variables
-let geojsonPath = 'data/PovertyLevel.json';
+let geojsonPath = 'data/PollutionLevel2016.json';
 let geojson_data;
 let geojson_layer;
 
 let brew = new classyBrew();
-let fieldtomap=`poverty_level`;
+let fieldtomap=`pollution_level`;
 
 let legend = L.control({position: 'bottomright'});
 let info_panel = L.control();
@@ -186,20 +186,7 @@ function getStyle(feature){
 		fillOpacity: 0.8
 	}
 }
-/*
-// return the color for each feature
-function getColor(d) {
 
-	return d > 1000000000 ? '#800026' :
-		   d > 500000000  ? '#BD0026' :
-		   d > 200000000  ? '#E31A1C' :
-		   d > 100000000  ? '#FC4E2A' :
-		   d > 50000000   ? '#FD8D3C' :
-		   d > 20000000   ? '#FEB24C' :
-		   d > 10000000   ? '#FED976' :
-					  '#FFEDA0';
-}
-*/
 function createLegend(){
 	legend.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend'),
