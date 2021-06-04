@@ -11,7 +11,7 @@ let lowpollution_markers = L.featureGroup();
 
 
 // put this in your global variables
-let geojsonPath = 'data/PollutionLevel2016.json';
+let geojsonPath = 'data/PollutionLevel.json';
 let geojson_data;
 let geojson_layer;
 
@@ -249,12 +249,22 @@ function createDashboard(properties){
 	console.log(properties)
 
 	// chart title
-	let title = 'Pollution Level in ' +properties['geounit'];
+	let title = 'Pollution Level in ' +properties['Country'];
 
 	// data values
 	let data = [
 
-        0.5,0.6,10
+        properties['1990'],
+		properties['1995'],
+		properties['2000'],
+		properties['2005'],
+		properties['2010'],
+		properties['2011'],
+		properties['2012'],
+		properties['2013'],
+		properties['2014'],
+		properties['2015'],
+		properties['2016'],
        
         
     ];
@@ -262,42 +272,58 @@ function createDashboard(properties){
 	// data fields
 	let fields = [
 
-        '2016',
-        '2017',
-        '2010',
+        '1990',
+		'1995',
+		'2000',
+		'2005',
+		'2010',
+		'2011',
+		'2012',
+		'2013',
+		'2014',
+		'2015',
+		'2016',
         
     ];
 
 	// set chart options
 	let options = {
+		series: [{
+		  name: "Desktops",
+		  data: data
+	  }],
 		chart: {
-			type: 'bar',
-			height: 300,
-			animations: {
-				enabled: true,
-			}
-		},
-		title: {
-			text: title,
-		},
-		plotOptions: {
-			bar: {
-				horizontal: true
-			}
-		},
-		series: [
-			{
-				data: data
-			}
-		],
-		xaxis: {
-			categories: fields
+		height: 350,
+		type: 'line',
+		zoom: {
+		  enabled: false
 		}
-	};
+	  },
+	  dataLabels: {
+		enabled: false
+	  },
+	  stroke: {
+		curve: 'straight'
+	  },
+	  title: {
+		text: title,
+		align: 'left'
+	  },
+	  grid: {
+		row: {
+		  colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+		  opacity: 0.5
+		},
+	  },
+	  xaxis: {
+		categories: fields,
+	  }
+	  };
 
 	// create the chart
-	let chart = new ApexCharts(document.querySelector('.dashboard'), options)
-	chart.render()
+	  let chart = new ApexCharts(document.querySelector('.dashboard'), options);
+	  chart.render();
+
 }
 
 /*
@@ -367,7 +393,7 @@ function createInfoPanel(){
 	info_panel.update = function (properties) {
 		// if feature is highlighted
 		if(properties){
-			this._div.innerHTML = `<b>${properties.country}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+			this._div.innerHTML = `<b>${properties.Country}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
 		}
 		// if feature is not highlighted
 		else
