@@ -106,6 +106,7 @@ function mapCSV(data){
 	
 	highpollution_markers.addTo(map);
 	lowpollution_markers.addTo(map);
+
 	
 	
 	})
@@ -113,6 +114,7 @@ function mapCSV(data){
 	let addLayers = {
 		"High Death Rates": highpollution_markers,
 		"Low Death Rates": lowpollution_markers,
+		//"Pollution Level": geojson_layer
 	}
 	
 	L.control.layers(null,addLayers).addTo(map);
@@ -173,7 +175,7 @@ function mapGeoJSON(field, num_classes, color,scheme){
 
 	createLegend();
 	createInfoPanel();
-	createTable();
+	//createTable();
 }
 
 function getStyle(feature){
@@ -247,7 +249,7 @@ function createDashboard(properties){
 	console.log(properties)
 
 	// chart title
-	let title = 'Poverty Level in ' +properties['geounit'];
+	let title = 'Pollution Level in ' +properties['geounit'];
 
 	// data values
 	let data = [
@@ -298,7 +300,7 @@ function createDashboard(properties){
 	chart.render()
 }
 
-
+/*
 function createTable(){
 
 	// empty array for our data
@@ -337,7 +339,7 @@ function createTable(){
 		},
 	});
 }
-
+*/
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
 function resetHighlight(e) {
