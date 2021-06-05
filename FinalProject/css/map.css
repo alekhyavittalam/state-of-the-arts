@@ -1,7 +1,39 @@
-body,html {
-	margin:0;
-	height:100%;
-	width:100%;
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+
+.header{
+	grid-area: header;
+	width: 100%;
+	height: 100%;
+	background: #EFE2BA;
+}
+
+.header ul{
+	display: inline-flex;
+	margin: 50px;
+}
+
+.header ul li{
+	list-style: none;
+	margin: 0 20px;
+	color: #4056A1;
+}
+
+
+.header a {
+	color: #4056a1
+}
+
+.header a:hover {
+	color: #f13c20;
+}
+
+.active{
+	color: #F13c20 !important ;
 }
 
 #map {
@@ -10,7 +42,7 @@ body,html {
 
 body {
 	display: grid;
-	grid-template-rows: 60px 360px 420px;
+	grid-template-rows: 100px 360px 250px;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 
 	"header header"
@@ -22,44 +54,8 @@ body {
     grid-area: dashboard;
 }
 
-.header {
-	grid-area: header;
-	padding:10px;
-	background-color: #333;
-	color: white;
-	font-size: 20px;
-}
-
-.header ul{
-	display: inline-flex;
-	margin: 5px;
-}
-
-.header ul li{
-	list-style: none;
-	margin: 0 50px;
-	color: #fff;
-}
-
-.active{
-	color: #F13c20 !important ;
-}
-
-.sidebar {
-	color: white;
-	grid-area: sidebar;
-	padding:10px;
-	background-color: #555;
-	overflow: auto;
-}
-
 .content {
 	grid-area: content;
-}
-
-.footer {
-	grid-area: footer;
-	background-color: gray;
 }
 
 /* legend styles */
