@@ -50,16 +50,16 @@
 body {
 	display: grid;
 	font-family: Arial, Helvetica, sans-serif;
-	grid-template-rows: 100px 420px 100px;
+	grid-template-rows: 100px;
 	grid-template-columns: 100%;
 	grid-template-areas: 
 	"header header"
 	"content content"
-	"sidebar sidebar";
+	"content content";
 }
 
 .container{
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 }
 
