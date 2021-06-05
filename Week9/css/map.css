@@ -86,3 +86,11 @@ body {
 	margin-right: 8px;
 	opacity: 0.7;
 }
+
+.title{
+	top: 20px;
+	right: 80px;
+	position: absolute;
+	text-decoration: none;
+	cursor:default;
+}
