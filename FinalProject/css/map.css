@@ -9,7 +9,7 @@
 	grid-area: header;
 	width: 100%;
 	height: 100%;
-	background: #EFE2BA;
+	background: #4A2C74;
 }
 
 .header ul{
@@ -20,12 +20,12 @@
 .header ul li{
 	list-style: none;
 	margin: 0 20px;
-	color: #4056A1;
+	color: white;
 }
 
 
 .header a {
-	color: #4056a1
+	color: white;
 }
 
 .header a:hover {
@@ -59,7 +59,7 @@ body {
 	grid-area: sidebar;
 	padding:10px;
 	text-align: center;
-	background-color: #BCE3F8;
+	background-color: #BAB8BC;
 	overflow: auto;
 }
 

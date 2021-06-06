@@ -8,7 +8,14 @@
 .html,body{
 	width: 100%;
 	height: 100%;
-	background: #EFE2BA;
+	background: white;
+}
+
+.header{
+	grid-area: header;
+	width: 100%;
+	height: 100%;
+	background: #4A2C74;
 }
 
 .header ul{
@@ -19,11 +26,11 @@
 .header ul li{
 	list-style: none;
 	margin: 0 20px;
-	color: #4056A1;
+	color: white;
 }
 
 .header a {
-	color: #4056a1
+	color: white;
 }
 
 .header a:hover {
@@ -90,7 +97,7 @@
 	width: 40px;
 	border: 2px solid transparent;
 	border-radius: 50%;
-	background-image: linear-gradient(#efe2ba,#efe2ba),
+	background-image: linear-gradient(white,white),
 	radial-gradient(circle at top left,#fd00da,#19d7f8);
 	background-origin: border-box;
 	background-clip: content-box, border-box;

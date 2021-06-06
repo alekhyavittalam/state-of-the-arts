@@ -9,7 +9,7 @@
 	grid-area: header;
 	width: 100%;
 	height: 100%;
-	background: #EFE2BA;
+	background: #4A2C74;
 }
 
 .header ul{
@@ -20,7 +20,7 @@
 .header ul li{
 	list-style: none;
 	margin: 0 20px;
-	color: #4056A1;
+	color: white;
 }
 
 .active{
@@ -28,7 +28,7 @@
 }
 
 .header a {
-	color: #4056a1
+	color: white;
 }
 
 .header a:hover {
