@@ -107,6 +107,13 @@ function mapCSV(data){
 	highpollution_markers.addTo(map);
 	lowpollution_markers.addTo(map);
 
+	// Highest Poverty Level Marker
+	var marker = L.marker([22.5937, 78.9629]).addTo(map);
+	var popup = marker.bindPopup('<b>India</b><br />Country with the Highest Poverty Rate (2011): 21.2');
+
+	// Lowest Poverty Level Marker
+	var marker = L.marker([58.1304, -106.3468]).addTo(map);
+	var popup = marker.bindPopup('<b>Canada</b><br />Country with the Lowest Poverty Rate (2013): 0.5');
 	
 	
 	})
