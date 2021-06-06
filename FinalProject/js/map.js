@@ -115,7 +115,8 @@ function mapCSV(data){
 	var marker = L.marker([58.1304, -106.3468]).addTo(map);
 	var popup = marker.bindPopup('<b>Canada</b><br />Country with the Lowest Poverty Rate (2013): 0.5');
 	
-	
+	popup.openPopup();
+
 	})
 	
 	let addLayers = {
