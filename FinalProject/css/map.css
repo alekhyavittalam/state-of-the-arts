@@ -43,15 +43,48 @@
 body {
 	display: grid;
 	grid-template-rows: 100px 360px 250px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 200px 1fr;
 	grid-template-areas: 
 	"header header"
-	"content content"
+	"sidebar content"
 	"dashboard dashboard";
 }
 
 .dashboard {
     grid-area: dashboard;
+}
+
+.sidebar{
+	color: #0A1126;
+	grid-area: sidebar;
+	padding:10px;
+	text-align: center;
+	background-color: #BCE3F8;
+	overflow: auto;
+}
+
+.pollution-level {
+	padding: 10px;	/* background-color: #333; */
+	float:left;
+	cursor:pointer;
+	color: #f6ecf8;
+	font-size: 1em;
+	border: 5px #0A1126;
+	background-color: #0A1126;
+	margin: 5px;
+	border-radius: 4px;
+}
+
+.death-rate {
+	padding: 10px;	/* background-color: #333; */
+	float:left;
+	cursor:pointer;
+	color: #f6ecf8;
+	font-size: 1em;
+	border: 5px #0A1126;
+	background-color: #0A1126;
+	margin: 5px;
+	border-radius: 4px;
 }
 
 .content {

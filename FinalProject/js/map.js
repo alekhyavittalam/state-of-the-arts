@@ -25,9 +25,23 @@ let info_panel = L.control();
 // initialize
 $( document ).ready(function() {
 	createMap(lat,lon,zl);
-	getGeoJSON();
-	readCSV(path2);
+	//getGeoJSON();
+	//readCSV(path2);
 });
+
+//make pollution choropleth map
+function pollutionMap() {
+	if (geojson_layer) {geojson_layer.clearLayers();}
+	markers.clearLayers();
+	getGeoJSON();
+}
+
+//make death rate map
+function deathRate() {
+	if(geojson_layer) {geojson_layer.clearLayers();}
+	if(markers){markers.clearLayers();}
+	readCSV(path2);
+}
 
 // create the map
 function createMap(lat,lon,zl){
@@ -59,8 +73,10 @@ function readCSV(path){
 	});
 }
 
-function mapCSV(data){
 
+
+function mapCSV(data){
+if(markers){markers.clearLayers();}
     let circleOptionsHigh = {
         radius: 5,
         weight: 1,
@@ -122,7 +138,7 @@ function mapCSV(data){
 
 	// Highest Poverty Level Marker
 	var marker = L.marker([22.5937, 78.9629]).addTo(map);
-	var popup = marker.bindPopup('<b>India</b><br />Country with the Highest Poverty Rate (2011): 21.2');
+	var popup1 = marker.bindPopup('<b>India</b><br />Country with the Highest Poverty Rate (2011): 21.2');
 	
 	// Lowest Poverty Level Marker
 	var marker = L.marker([58.1304, -106.3468]).addTo(map);
@@ -298,7 +314,7 @@ function createDashboard(properties){
 	// set chart options
 	let options = {
 		series: [{
-		  name: "Desktops",
+		  name: "Pollution Level",
 		  data: data
 	  }],
 		chart: {
@@ -402,7 +418,7 @@ function createInfoPanel(){
 	info_panel.update = function (properties) {
 		// if feature is highlighted
 		if(properties){
-			this._div.innerHTML = `<b>${properties.Country}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+			this._div.innerHTML = `<b>${properties.Country}</b><br> Pollution Level: ${properties[fieldtomap]}`;
 		}
 		// if feature is not highlighted
 		else
