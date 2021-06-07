@@ -142,7 +142,7 @@ if(markers){markers.clearLayers();}
 	map.fitBounds(lowpollution_markers.getBounds());
 
 	let icon = L.icon({
-		iconUrl: 'https://raw.githubusercontent.com/natgrace/DH151/main/Week3/icons8-camera-100.png',
+		iconUrl: 'https://raw.githubusercontent.com/natgrace/DH151/main/Week3/triangle.png',
 		iconSize: [50, 50],
 		iconAnchor: [29, 49],
 		popupAnchor: [0, -41],
@@ -150,11 +150,11 @@ if(markers){markers.clearLayers();}
 
 	// Highest Poverty Level Marker
 	var marker = L.marker([22.5937, 78.9629], {icon: icon}).addTo(map);
-	var popup1 = marker.bindPopup('<b>India</b><br>Country with the Highest Poverty Rate (2011): 21.2');
+	var popup1 = marker.bindPopup('<b>India</b><br>Country with the Highest Mortality Rate: 21.2');
 	
 	// Lowest Poverty Level Marker
 	var marker = L.marker([58.1304, -106.3468], {icon: icon}).addTo(map);
-	var popup = marker.bindPopup('<b>Canada</b><br>Country with the Lowest Poverty Rate (2013): 0.5');
+	var popup = marker.bindPopup('<b>Canada</b><br>Country with the Lowest Mortality Rate: 0.5');
 
 	popup.openPopup();	
 
