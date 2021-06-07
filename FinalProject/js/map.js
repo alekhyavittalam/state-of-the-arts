@@ -151,8 +151,8 @@ if(markers){markers.clearLayers();}
 	map.fitBounds(lowpollution_markers.getBounds());
 
 	let povertyMarker = {
-        color: '#4A2C74',
-        fillColor: '#4A2C74',
+        color: '#white',
+        fillColor: '#white',
     }
 
 	// Highest Poverty Level Marker
@@ -177,7 +177,7 @@ function getGeoJSON(){
 		geojson_data = data;
 
 		// call the map function
-		mapGeoJSON(fieldtomap,5, 'Reds',`quantiles`) // add a field to be used
+		mapGeoJSON(fieldtomap,5, 'Purples',`quantiles`) // add a field to be used
 	})
 }
 
