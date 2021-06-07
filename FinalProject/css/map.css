@@ -72,8 +72,9 @@ body {
 	font-size: 1em;
 	border: 5px #0A1126;
 	background-color: #0A1126;
-	margin: 20px;
+	margin: 15px;
 	border-radius: 4px;
+	font-size: 14px;
 }
 
 .button-item:hover{

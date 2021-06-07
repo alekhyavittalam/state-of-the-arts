@@ -8,6 +8,7 @@ let path2 = "data/DataMerge_2017.csv"
 let markers = L.featureGroup();
 let highpollution_markers = L.featureGroup();
 let lowpollution_markers = L.featureGroup();
+let layer_control;
 
 
 // put this in your global variables
@@ -32,14 +33,25 @@ $( document ).ready(function() {
 //make pollution choropleth map
 function pollutionMap() {
 	if (geojson_layer) {geojson_layer.clearLayers();}
-	markers.clearLayers();
+	lowpollution_markers.clearLayers()
+	highpollution_markers.clearLayers()
 	getGeoJSON();
 }
 
 //make death rate map
 function deathRate() {
 	if(geojson_layer) {geojson_layer.clearLayers();}
-	if(markers){markers.clearLayers();}
+	lowpollution_markers.clearLayers()
+	highpollution_markers.clearLayers()
+	readCSV(path2);
+}
+
+//both maps
+function bothMaps() {
+	if(geojson_layer) {geojson_layer.clearLayers();}
+	lowpollution_markers.clearLayers()
+	highpollution_markers.clearLayers()
+	getGeoJSON();
 	readCSV(path2);
 }
 
@@ -132,16 +144,23 @@ if(markers){markers.clearLayers();}
 		//"Pollution Level": geojson_layer
 	}
 	
-	L.control.layers(null,addLayers).addTo(map);
+	if(!layer_control){
+		layer_control =L.control.layers(null,addLayers).addTo(map);
+	}
 	
 	map.fitBounds(lowpollution_markers.getBounds());
 
+	let povertyMarker = {
+        color: '#4A2C74',
+        fillColor: '#4A2C74',
+    }
+
 	// Highest Poverty Level Marker
-	var marker = L.marker([22.5937, 78.9629]).addTo(map);
+	var marker = L.marker([22.5937, 78.9629], povertyMarker).addTo(map);
 	var popup1 = marker.bindPopup('<b>India</b><br />Country with the Highest Poverty Rate (2011): 21.2');
 	
 	// Lowest Poverty Level Marker
-	var marker = L.marker([58.1304, -106.3468]).addTo(map);
+	var marker = L.marker([58.1304, -106.3468], povertyMarker).addTo(map);
 	var popup = marker.bindPopup('<b>Canada</b><br />Country with the Lowest Poverty Rate (2013): 0.5');
 
 	popup.openPopup();	
