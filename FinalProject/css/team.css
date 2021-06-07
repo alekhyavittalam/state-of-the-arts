@@ -52,6 +52,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	grid-template-rows: 100px 420px 100px;
 	grid-template-columns: 100%;
+	background-color: #F2EFE9;
 	grid-template-areas: 
 	"header header"
 	"content content"
