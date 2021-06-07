@@ -26,8 +26,6 @@ let info_panel = L.control();
 // initialize
 $( document ).ready(function() {
 	createMap(lat,lon,zl);
-	//getGeoJSON();
-	//readCSV(path2);
 });
 
 //make pollution choropleth map
@@ -86,7 +84,6 @@ if(markers){markers.clearLayers();}
         color: 'white',
         fillColor: '#FF6962',
         fillOpacity: 1,
-        //radius: item['Outdoor.air.pollution..IHME..2019.']*100
     }
 
     let circleOptionsLow = {
@@ -95,26 +92,19 @@ if(markers){markers.clearLayers();}
         color: 'white',
         fillColor: '#5EA777',
         fillOpacity: 1,
-        //radius: item['Outdoor.air.pollution..IHME..2019.']*100
     }
 
 	data.data.forEach(function(item,index){
 		if(item['Outdoor.air.pollution..IHME..2019.'] > 6.00){
-			//circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
-			//circleOptions.fillColor = 'red'
 			let highpollution_marker = L.circleMarker([item.latitude,item.longitude], circleOptionsHigh).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
 				this.openPopup()
 		})
 	
 		highpollution_markers.addLayer(highpollution_marker)
 	
-		//add entry to sidebar
-		//$('.sidebar').append(`<img src="${item.thumbnail_url}" onmouseover="panToImage(${index})">`)
 	}
 	
 	else{
-		//circleOptions.radius = item['Outdoor.air.pollution..IHME..2019.'] * 100
-		//circleOptions.fillColor = 'green'
 		let lowpollution_marker = L.circleMarker([item.latitude,item.longitude], circleOptionsLow).bindPopup(`${item.country}<br> Percentage of Deaths due to Pollution: ${item['Outdoor.air.pollution..IHME..2019.']}`).on('mouseover',function(){
 			this.openPopup()
 	})
@@ -132,7 +122,6 @@ if(markers){markers.clearLayers();}
 	let addLayers = {
 		"High Death Rates": highpollution_markers,
 		"Low Death Rates": lowpollution_markers,
-		//"Pollution Level": geojson_layer
 	}
 	
 	if(!layer_control){
@@ -212,7 +201,6 @@ function mapGeoJSON(field, num_classes, color,scheme){
 
 	createLegend();
 	createInfoPanel();
-	//createTable();
 }
 
 function getStyle(feature){
@@ -362,47 +350,6 @@ function createDashboard(properties){
 	  chart.render();
 
 }
-
-/*
-function createTable(){
-
-	// empty array for our data
-	let datafortable = [];
-
-	// loop through the data and add the properties object to the array
-	geojson_data.features.forEach(function(item){
-		datafortable.push(item.properties)
-	})
-
-	// array to define the fields: each object is a column
-	let fields = [
-		{ name: "geounit", type: "text"},
-		{ name: 'Year', type: 'number'},
-		{ name: 'poverty_level', type: 'number'},
-	]
- 
-	// create the table in our footer
-	$(".footer").jsGrid({
-		width: "100%",
-		height: "400px",
-		
-		editing: true,
-		sorting: true,
-		paging: true,
-		autoload: true,
- 
-		pageSize: 10,
-		pageButtonCount: 5,
- 
-		data: datafortable,
-		fields: fields,
-		rowClick: function(args) { 
-			console.log(args);
-            zoomTo(args.item.geounit)
-		},
-	});
-}
-*/
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
 function resetHighlight(e) {
