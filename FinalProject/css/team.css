@@ -49,13 +49,13 @@
 body {
 	display: grid;
 	font-family: Arial, Helvetica, sans-serif;
-	grid-template-rows: 100px 420px 100px;
+	grid-template-rows: 100px;
 	grid-template-columns: 100%;
-	background-color: #353438;
+	background-color: #3b3352;
 	grid-template-areas: 
 	"header header"
 	"content content"
-	"sidebar sidebar";
+	"content content";
 }
 
 .container{
@@ -74,7 +74,8 @@ body {
 	content: "";
   	clear: both;
   	display: table;
-	background-color:#353438 ;
+	background-color: linear-gradient(#353438,#353438) ;
+	;
 	padding: 70px;
 }
 
@@ -111,7 +112,7 @@ body {
 .team {
 	/*display: center;*/
     color:#D79922 ;
-	background-color: #F2EFE9;
+	background-image: linear-gradient(#353438,#8a8791);
 	text-justify:inter-word;
 	height: auto;
     line-height: 30px;
