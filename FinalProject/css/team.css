@@ -9,7 +9,7 @@
 	grid-area: header;
 	width: 100%;
 	height: 100%;
-	background: #EFE2BA;
+	background: #353438;
 }
 
 .header ul{
@@ -20,7 +20,6 @@
 .header ul li{
 	list-style: none;
 	margin: 0 20px;
-	color: #4056A1;
 }
 
 .active{
@@ -28,7 +27,7 @@
 }
 
 .header a {
-	color: #4056A1;
+	color:#c1bcdf;
 }
 
 .header a:hover {
@@ -52,7 +51,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	grid-template-rows: 100px 420px 100px;
 	grid-template-columns: 100%;
-	background-color: #EFE2BA;
+	background-color: #353438;
 	grid-template-areas: 
 	"header header"
 	"content content"
@@ -75,7 +74,7 @@ body {
 	content: "";
   	clear: both;
   	display: table;
-	background-color:#EFE2BA ;
+	background-color:#353438 ;
 	padding: 70px;
 }
 
@@ -89,7 +88,7 @@ body {
 	border-radius: 20px 20px 20px 20px ;
 	float: left;
 	width: 22%;
-	background-color: #f8f4e6;
+	background-color: #faf9f6;
 	/*height: auto;*/
 	color: #4056A1;
 	margin: 33px 33px 33px 33px;
