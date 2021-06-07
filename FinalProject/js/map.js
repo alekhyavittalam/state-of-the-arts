@@ -132,7 +132,7 @@ if(markers){markers.clearLayers();}
 
 	let icon = L.icon({
 		iconUrl: 'https://raw.githubusercontent.com/natgrace/DH151/main/Week3/triangle.png',
-		iconSize: [50, 50],
+		iconSize: [25, 25],
 		iconAnchor: [29, 49],
 		popupAnchor: [0, -41],
 	})
@@ -143,9 +143,7 @@ if(markers){markers.clearLayers();}
 	
 	// Lowest Deaths Level Marker
 	var marker = L.marker([-40.9006, 174.8860], {icon: icon}).addTo(map);
-	var popup = marker.bindPopup('<b>New Zealand</b><br>Lowest Deaths by Pollution: 8.49 deaths per 100,000');
-
-	popup.openPopup();	
+	var popup = marker.bindPopup('<b>New Zealand</b><br>Lowest Deaths by Pollution: 8.49 deaths per 100,000');	
 
 }
 
