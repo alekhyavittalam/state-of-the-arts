@@ -9,7 +9,7 @@
 	grid-area: header;
 	width: 100%;
 	height: 100%;
-	background: #4A2C74;
+	background: #EFE2BA;
 }
 
 .header ul{
@@ -20,7 +20,7 @@
 .header ul li{
 	list-style: none;
 	margin: 0 20px;
-	color: white ;
+	color: #4056A1 ;
 }
 
 .active{
@@ -28,7 +28,7 @@
 }
 
 .header a {
-	color: white;
+	color: #4056A1;
 }
 
 .header a:hover {
@@ -52,7 +52,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	grid-template-rows: 100px;
 	grid-template-columns: 100%;
-	background-color: #F2EFE9;
+	background-color: #EFE2BA;
 	grid-template-areas: 
 	"header header"
 	"content content"
@@ -72,7 +72,7 @@ body {
 .about {
 	display: center;
     color: #4056A1 ;
-	background-color: #F2EFE9;
+	background-color: #EFE2BA;
 	text-align: justify;
 	height: auto;
     line-height: 30px;
