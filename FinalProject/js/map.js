@@ -150,11 +150,11 @@ if(markers){markers.clearLayers();}
 
 	// Highest Poverty Level Marker
 	var marker = L.marker([22.5937, 78.9629], {icon: icon}).addTo(map);
-	var popup1 = marker.bindPopup('<b>India</b><br>Country with the Highest Mortality Rate: 21.2');
+	var popup1 = marker.bindPopup('<b>India</b><br> Highest Deaths by Pollution: 88.04 deaths per 100,000');
 	
 	// Lowest Poverty Level Marker
-	var marker = L.marker([58.1304, -106.3468], {icon: icon}).addTo(map);
-	var popup = marker.bindPopup('<b>Canada</b><br>Country with the Lowest Mortality Rate: 0.5');
+	var marker = L.marker([-40.9006, 174.8860], {icon: icon}).addTo(map);
+	var popup = marker.bindPopup('<b>New Zealand</b><br> Lowest Deaths by Pollution: 8.49 deaths per 100,000');
 
 	popup.openPopup();	
 
