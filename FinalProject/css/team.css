@@ -75,7 +75,7 @@ body {
 	content: "";
   	clear: both;
   	display: table;
-	background-color:#F2EFE9 ;
+	background-color:#EFE2BA ;
 	padding: 70px;
 }
 
@@ -89,7 +89,7 @@ body {
 	border-radius: 20px 20px 20px 20px ;
 	float: left;
 	width: 22%;
-	background-color: #F2EFE9;
+	background-color: #f8f4e6;
 	/*height: auto;*/
 	color: #4056A1;
 	margin: 33px 33px 33px 33px;
