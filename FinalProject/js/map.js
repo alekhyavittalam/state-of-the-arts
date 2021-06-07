@@ -148,13 +148,13 @@ if(markers){markers.clearLayers();}
 		popupAnchor: [0, -41],
 	})
 
-	// Highest Poverty Level Marker
+	// Highest Deaths Level Marker
 	var marker = L.marker([22.5937, 78.9629], {icon: icon}).addTo(map);
-	var popup1 = marker.bindPopup('<b>India</b><br> Highest Deaths by Pollution: 88.04 deaths per 100,000');
+	var popup1 = marker.bindPopup('<b>India</b><br>Highest Deaths by Pollution: 88.04 deaths per 100,000');
 	
-	// Lowest Poverty Level Marker
+	// Lowest Deaths Level Marker
 	var marker = L.marker([-40.9006, 174.8860], {icon: icon}).addTo(map);
-	var popup = marker.bindPopup('<b>New Zealand</b><br> Lowest Deaths by Pollution: 8.49 deaths per 100,000');
+	var popup = marker.bindPopup('<b>New Zealand</b><br>Lowest Deaths by Pollution: 8.49 deaths per 100,000');
 
 	popup.openPopup();	
 
