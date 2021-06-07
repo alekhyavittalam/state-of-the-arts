@@ -179,7 +179,7 @@ function getGeoJSON(){
 		geojson_data = data;
 
 		// call the map function
-		mapGeoJSON(fieldtomap,5, 'Purples',`quantiles`) // add a field to be used
+		mapGeoJSON(fieldtomap,5, 'Blues',`quantiles`) // add a field to be used
 	})
 }
 
