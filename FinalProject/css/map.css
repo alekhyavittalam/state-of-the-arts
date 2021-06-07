@@ -9,7 +9,7 @@
 	grid-area: header;
 	width: 100%;
 	height: 100%;
-	background: #4A2C74;
+	background: #353438;
 }
 
 .header ul{
@@ -20,12 +20,12 @@
 .header ul li{
 	list-style: none;
 	margin: 0 20px;
-	color: white;
+	color: #4056a1;
 }
 
 
 .header a {
-	color: white;
+	color:#c1bcdf;
 }
 
 .header a:hover {
@@ -59,7 +59,7 @@ body {
 	grid-area: sidebar;
 	padding:10px;
 	text-align: center;
-	background-color: #BAB8BC;
+	background-color: #a09e9a;
 	overflow: auto;
 }
 
@@ -71,7 +71,7 @@ body {
 	color: #f6ecf8;
 	font-size: 1em;
 	border: 5px #0A1126;
-	background-color: #0A1126;
+	background-color: #4056a1;
 	margin: 15px;
 	border-radius: 4px;
 	font-size: 14px;
