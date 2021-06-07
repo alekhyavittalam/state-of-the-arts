@@ -46,15 +46,6 @@ function deathRate() {
 	readCSV(path2);
 }
 
-//both maps
-function bothMaps() {
-	if(geojson_layer) {geojson_layer.clearLayers();}
-	lowpollution_markers.clearLayers()
-	highpollution_markers.clearLayers()
-	getGeoJSON();
-	readCSV(path2);
-}
-
 // create the map
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
